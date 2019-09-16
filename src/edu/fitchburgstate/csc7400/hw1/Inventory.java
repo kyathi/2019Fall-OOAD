@@ -2,14 +2,30 @@ package edu.fitchburgstate.csc7400.hw1;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+/**
+ * Class: Object-Oriented Design and Analysis
+ * Professor: Orlando Montalvo
+ * Assignment: HW 1
+ * 
+ * Date: 2018-09-16
+ */
 
+/**
+ * Inventory gives the information of the stock of the guitars available in the store.
+ * 
+ * @author HeadFirstOODA
+ *
+ */
 public class Inventory {
   private List<Guitar> guitars;
 
   public Inventory() {
     guitars = new LinkedList<Guitar>();
   }
-
+  
+  /**
+	 * Adds new guitars to the stock list.	 	 
+	 */
   public void addGuitar(String serialNumber, double price,
                         String builder, String model,
                         String type, String backWood, String topWood) {
@@ -17,6 +33,10 @@ public class Inventory {
                                model, type, backWood, topWood);
     guitars.add(guitar);
   }
+  
+  /**
+	 * Returns the guitar based on serial number	 
+	 */
   public Guitar getGuitar(String serialNumber) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
       Guitar guitar = (Guitar)i.next();
@@ -26,6 +46,10 @@ public class Inventory {
     }
     return null;
   }
+  
+  /**
+	 * Searches for guitar
+	  */
   public Guitar search(Guitar searchGuitar) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
       Guitar guitar = (Guitar)i.next();
