@@ -17,8 +17,15 @@ import java.util.List;
  *
  */
 public class Inventory {
+ /**
+ * The list of guitars
+ */
   private List<Guitar> guitars;
 
+  /**
+	 * Full constructor
+	 * Creates an empty guitar list
+	 */
   public Inventory() {
     guitars = new LinkedList<Guitar>();
   }
