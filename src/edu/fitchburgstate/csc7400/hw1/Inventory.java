@@ -12,7 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Inventory gives information about stock of the guitar available 
+ * Inventory gives information about stock and the guitars available 
  * in Rick's music store that the user searches.
  * 
  * @author HeadFirstOODA
