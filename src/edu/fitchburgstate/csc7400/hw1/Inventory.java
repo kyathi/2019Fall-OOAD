@@ -55,7 +55,7 @@ public class Inventory {
   }
   
   /**
-   * Searches and returns the matched guitar that user searches.
+   * Searches and returns the matched guitar that the user looks.
    */
   public Guitar search(Guitar searchGuitar) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
