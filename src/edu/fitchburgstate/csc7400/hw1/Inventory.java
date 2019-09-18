@@ -3,6 +3,14 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Class: Object-Oriented Design and Analysis
+ * Professor: Orlando Montalvo
+ * Assignment: HW 1
+ *
+ * Date: 2019-09-18
+ */
+
 public class Inventory {
   private List<Guitar> guitars;
 
