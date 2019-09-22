@@ -1,4 +1,3 @@
-package edu.fitchburgstate.csc7400.hw1;
 /**
  * Class: Object-Oriented Design and Analysis
  * Professor: Orlando Montalvo
@@ -6,6 +5,7 @@ package edu.fitchburgstate.csc7400.hw1;
  * 
  * Date: 2018-09-03
  */
+package edu.fitchburgstate.csc7400.hw1;
 
 /**
  * Guitar contains the information needed to keep track of a type of guitar from
