@@ -2,9 +2,9 @@ package edu.fitchburgstate.csc7400.hw1;
 /**
  * Course Name : Object Oriented Design and Analysis
  * Professor Name : Orlando Montalvo
- * Date : 09-18-2019
+ * Date : 2019-09-18
  * Assignment - HW1
- * Student : Divya Mallepally (01398602)
+ * Author : Divya Mallepally (01398602)
  */
  
 import java.util.Iterator;
@@ -63,7 +63,9 @@ public class Inventory {
   }
   /**
    * Search inventory and returns list of matching guitars. 
+   *
    * @param searchGuitar search the specific type of guitar.
+   *
    * @return Guiter by matching attributes like manufacturer, model, type, backwood, topwood or null.
    */
   public Guitar search(Guitar searchGuitar) {
