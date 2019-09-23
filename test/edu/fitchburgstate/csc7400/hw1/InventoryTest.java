@@ -1,15 +1,34 @@
 package edu.fitchburgstate.csc7400.hw1;
+/**
+ * Class : Object -Oriented Analysis and Design
+ *  Professor: Orlando Montalvo
+ * Assignment HW1
+ * 
+ * student-Abha Kumari
+ * Date- 2019-09-17
+ */
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+/**
+ * 
+ * InventoryTest will match the customer requirement with the available inventory in the store 
+ * @author abhak
+ *
+ */
 
 class InventoryTest {
 	Inventory inventory;
+	/**
+	 * throws the exception before inventory will be added in program
+	 * @throws Exception
+	 */
 
-	@BeforeEach
+	@BeforeEach/* is the method which will be executed before the @test*/
 	void setUp() throws Exception {
 		inventory = new Inventory();
 		inventory.addGuitar("11277", 3999.95, "Collings", "CJ", "acoustic", "Indian Rosewood", "Sitka");
@@ -25,12 +44,17 @@ class InventoryTest {
 		inventory.addGuitar("6 29584", 2100.95, "PRS", "Dave Navarro Signature", "electric", "Mahogany", "Maple");
 	}
 
-	@AfterEach
+	@AfterEach/* is used to show that this method will be executed after the @test method*/
 	void tearDown() throws Exception {
 		inventory = null;
 	}
 
 	@Test
+	/**
+	 * In testsearch method it will be match  the store inventory with the customer requirment
+	 * is there will be some matching then tell the customer about the options they have for 
+	 * him.
+	 */
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
 		Guitar guitar = inventory.search(whatErinLikes);
