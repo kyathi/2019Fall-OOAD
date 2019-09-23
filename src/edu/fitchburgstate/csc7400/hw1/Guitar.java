@@ -11,8 +11,8 @@ package edu.fitchburgstate.csc7400.hw1;
  * Guitar contains the information needed to keep track of a type of guitar from
  * Rick's music store
  * 
- * @author HeadFirstOODA
- *
+ * @author Nodir.Nabiev
+ * Date: 2019-09-18
  */
 public class Guitar {
 
@@ -78,7 +78,6 @@ public class Guitar {
 
 	/**
 	 * Returns the guitar type
-	 * @return
 	 */
 	public String getType() {
 		return type;
@@ -93,7 +92,6 @@ public class Guitar {
 
 	/**
 	 * Returns the type of wood used in the face
-	 * @return
 	 */
 	public String getTopWood() {
 		return topWood;

@@ -6,9 +6,20 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Tests Inventory class properties.
+ *
+ * @author Nodir.Nabiev
+ * Date: 2019-09-18
+ */
 class InventoryTest {
 	Inventory inventory;
 
+	/**
+	 * Set up guitar inventory before test.
+	 *
+	 * @throws Exception exception
+	 */
 	@BeforeEach
 	void setUp() throws Exception {
 		inventory = new Inventory();
@@ -25,11 +36,21 @@ class InventoryTest {
 		inventory.addGuitar("6 29584", 2100.95, "PRS", "Dave Navarro Signature", "electric", "Mahogany", "Maple");
 	}
 
+	/**
+	 * Clean up inventory after each test.
+	 *
+	 * @throws Exception exception
+	 */
 	@AfterEach
 	void tearDown() throws Exception {
 		inventory = null;
 	}
 
+	/**
+	 * Search the specified guitar from the inventory.
+	 *
+	 * @result Finds the requested guitar from the inventory, if null, no matched guitar found
+	 */
 	@Test
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
