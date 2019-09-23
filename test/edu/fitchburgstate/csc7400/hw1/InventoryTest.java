@@ -43,5 +43,12 @@ class InventoryTest {
 			fail("Did not find guitar");
 		}
 	}
+	
+	@Test
+	void addGuitar() {
+		var inventory = new Inventory();
+		inventory.addGuitar("00001", 500, "Fender", "A4", "Accoustic", "Wood", "Wood");
+		assertEquals(1, inventory.guitars.size());
+	}
 
 }
