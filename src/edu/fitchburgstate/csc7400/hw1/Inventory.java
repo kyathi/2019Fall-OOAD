@@ -1,19 +1,17 @@
 package edu.fitchburgstate.csc7400.hw1;
 
-/*
- *	Class: Object Oriented Analysis and Design
- *	Instructor: Orlando Montalvo
- *	Assignment: Homework 1
- *	Student Name: Rick Phillips
- */
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 
-/**
- * @author rphillips
- *
+/*
+ *	Class: Object Oriented Analysis and Design
+ *	Professor: Orlando Montalvo
+ *	Assignment: HW 1
+ *	Date: 2019-09-234
+ *	Student Name: Rick Phillips (rphilli7)
  */
 public class Inventory {
   private List<Guitar> guitars;
@@ -26,13 +24,13 @@ public class Inventory {
  * Invoke the new guitar constructor and add to
  * our collection
  * 
- * @param serialNumber - unique identifier
- * @param price - item cost
- * @param builder - item manufacturer
- * @param model - item model
- * @param type - item type
- * @param backWood - item back wood
- * @param topWood - item top wood
+ * @param serialNumber unique identifier
+ * @param price item cost
+ * @param builder item manufacturer
+ * @param model item model
+ * @param type item type
+ * @param backWood item back wood
+ * @param topWood item top wood
  */
 public void addGuitar(String serialNumber, double price,
                         String builder, String model,
@@ -60,9 +58,18 @@ public Guitar getGuitar(String serialNumber) {
   }
   
   
- /**
- * @param searchGuitar - object to compare with our collection
- * @return - first guitar found or null if none
+/**
+ * Searches inventory and returns list of matching guitars.
+ * Finds guitars by matching on provided parameters. Nulls are
+ * considered wild cards.
+ *
+ * @param manufacturer the guitar manufacturer
+ * @param style the guitar style
+ *
+ * @return collection of guitars
+ *
+ * @precondition inventory must be initialized
+ * @postcondition return != null
  */
 public Guitar search(Guitar searchGuitar) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
