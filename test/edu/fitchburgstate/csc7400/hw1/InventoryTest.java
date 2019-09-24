@@ -2,7 +2,7 @@
 /** Class	   : Object-Oriented Design and Analysis
 *   Professor  : Orlando Montalvo
 *   Assignment : Home Work 1
-*   Student	   : Komal(@01411726)
+*   Student name and id	   : Komal(@01411726)
 *   Date	   : 2019-09-24
 */
 
