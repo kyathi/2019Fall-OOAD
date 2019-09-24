@@ -1,14 +1,28 @@
+/**
+ * Class     : Object-Oriented Analysis and Design
+ * Professor : Orlando Montalvo
+ * Assignment: HW-1
+ * Date      :09-24-2019
+ * @author Sveerapu
+ *
+ */
+
 package edu.fitchburgstate.csc7400.hw1;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/*
+ * Represents Test methods for Inventory Class
+ */
 class InventoryTest {
 	Inventory inventory;
-
+/**
+ * Adds guitars to Inventory Object before Test method execution
+ * @throws Exception
+ */
 	@BeforeEach
 	void setUp() throws Exception {
 		inventory = new Inventory();
@@ -24,12 +38,18 @@ class InventoryTest {
 		inventory.addGuitar("566-62", 8999.95, "Ryan", "Cathedral", "acoustic", "Cocobolo", "Cedar");
 		inventory.addGuitar("6 29584", 2100.95, "PRS", "Dave Navarro Signature", "electric", "Mahogany", "Maple");
 	}
-
+/**
+ *After TestSearch, Reset Inventory to Null
+ * @throws Exception
+ */
 	@AfterEach
 	void tearDown() throws Exception {
 		inventory = null;
 	}
-
+/**
+ *  User provides guitar details so that it search for matching guitar in inventory 
+ *  if there returns information else return  did not find
+ */
 	@Test
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
