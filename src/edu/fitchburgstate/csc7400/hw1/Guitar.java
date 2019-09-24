@@ -23,7 +23,7 @@ public class Guitar {
 	 * @param price store price
 	 * @param manufacturer the guitar's manufacturer
 	 * @param model the manufacturers model
-	 * @param type guitar type (electric/accoustic)
+	 * @param type guitar type (electric/acoustic)
 	 * @param backWood the wood used for the guitar body
 	 * @param topWood the wood used for the guitar's face
 	 */
