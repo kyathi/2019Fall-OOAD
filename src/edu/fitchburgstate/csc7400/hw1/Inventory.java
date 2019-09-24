@@ -4,11 +4,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Inventory {
-  private List<Guitar> guitars;
+  public List<Guitar> guitars;
 
   public Inventory() {
+	
     guitars = new LinkedList<Guitar>();
+    
   }
+  
 
   public void addGuitar(String serialNumber, double price,
                         String builder, String model,
