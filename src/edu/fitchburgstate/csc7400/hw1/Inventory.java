@@ -1,7 +1,15 @@
 package edu.fitchburgstate.csc7400.hw1;
+
+/*
+ *	Class: Object Oriented Analysis and Design
+ *	Instructor: Orlando Montalvo
+ *	Assignment: Homework 1
+ *	Student Name: Rick Phillips
+ */
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+
 
 public class Inventory {
   private List<Guitar> guitars;

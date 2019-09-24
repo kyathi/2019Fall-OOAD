@@ -1,6 +1,7 @@
 
 /.vscode
 /.idea
+/.metadata
 
 # Compiled class file
 *.class
