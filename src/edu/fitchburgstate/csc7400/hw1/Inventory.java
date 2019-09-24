@@ -11,6 +11,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 
+/**
+ * @author rphillips
+ *
+ */
 public class Inventory {
   private List<Guitar> guitars;
 
@@ -18,14 +22,34 @@ public class Inventory {
     guitars = new LinkedList<Guitar>();
   }
 
-  public void addGuitar(String serialNumber, double price,
+/**
+ * Invoke the new guitar constructor and add to
+ * our collection
+ * 
+ * @param serialNumber - unique identifier
+ * @param price - item cost
+ * @param builder - item manufacturer
+ * @param model - item model
+ * @param type - item type
+ * @param backWood - item back wood
+ * @param topWood - item top wood
+ */
+public void addGuitar(String serialNumber, double price,
                         String builder, String model,
                         String type, String backWood, String topWood) {
+	  
     Guitar guitar = new Guitar(serialNumber, price, builder,
                                model, type, backWood, topWood);
+    
     guitars.add(guitar);
+    
   }
-  public Guitar getGuitar(String serialNumber) {
+
+ /**
+ * @param serialNumber to search against the collection of guitars
+ * @return guitar with the provided serial number or null if none
+ */
+public Guitar getGuitar(String serialNumber) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
       Guitar guitar = (Guitar)i.next();
       if (guitar.getSerialNumber().equals(serialNumber)) {
@@ -34,7 +58,13 @@ public class Inventory {
     }
     return null;
   }
-  public Guitar search(Guitar searchGuitar) {
+  
+  
+ /**
+ * @param searchGuitar - object to compare with our collection
+ * @return - first guitar found or null if none
+ */
+public Guitar search(Guitar searchGuitar) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
       Guitar guitar = (Guitar)i.next();
       // Ignore serial number since that's unique
