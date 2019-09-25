@@ -34,12 +34,12 @@ public class Inventory {
    * Adds the guitar to the list.
    * 
    * @param serialNumber manufacturer serial number
-	 * @param price store price
-	 * @param builder the guitar's manufacturer
-	 * @param model the manufacturers model
-	 * @param type guitar type (electric/accoustic)
-	 * @param backWood the wood used for the guitar body
-	 * @param topWood the wood used for the guitar's face
+   * @param price store price
+   * @param builder the guitar's manufacturer
+   * @param model the manufacturers model
+   * @param type guitar type (electric/accoustic)
+   * @param backWood the wood used for the guitar body
+   * @param topWood the wood used for the guitar's face
    *
    */
   public void addGuitar(String serialNumber, double price,
