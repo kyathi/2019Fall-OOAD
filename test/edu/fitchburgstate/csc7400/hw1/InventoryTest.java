@@ -1,9 +1,9 @@
 /**
- * Class     : Object-Oriented Analysis and Design
- * Professor : Orlando Montalvo
- * Assignment: HW-1
- * Date      :09-24-2019
- * @author Sveerapu
+ * Class        : Object-Oriented Analysis and Design
+ * Professor    : Orlando Montalvo
+ * Assignment   : HW-1
+ * Date         : 09-24-2019
+ * @author         Sveerapu
  *
  */
 
