@@ -3,7 +3,9 @@
  * Professor: Orlando Montalvo
  * Assignment: HW 1
  * 
- * Date: 2018-09-03
+ * Date: 2018-9-23
+ *
+ * Student: Oleksandr(Alex) Koblosh
  */
 package edu.fitchburgstate.csc7400.hw1;
 

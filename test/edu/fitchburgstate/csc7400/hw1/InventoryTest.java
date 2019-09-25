@@ -1,13 +1,35 @@
-package edu.fitchburgstate.csc7400.hw1;
+/**
+ * Class: Object-Oriented Design and Analysis
+ * Professor: Orlando Montalvo
+ * Assignment: HW 1
+ *
+ * Date: 2018-9-23
+ *
+ * Student: Oleksandr(Alex) Koblosh
+ */
 
-import static org.junit.jupiter.api.Assertions.*;
+package edu.fitchburgstate.csc7400.hw1;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+
+/**
+ * InventoryTest contains testing for Inventory class
+ * Rick's music store
+ *
+ * @author KobloshAlex
+ *
+ */
 class InventoryTest {
 	Inventory inventory;
+
+	/**
+	 * create Inventory method with parameters
+	 */
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -24,12 +46,16 @@ class InventoryTest {
 		inventory.addGuitar("566-62", 8999.95, "Ryan", "Cathedral", "acoustic", "Cocobolo", "Cedar");
 		inventory.addGuitar("6 29584", 2100.95, "PRS", "Dave Navarro Signature", "electric", "Mahogany", "Maple");
 	}
-
+	/**
+	 * Throw exception if inventory is null
+	 */
 	@AfterEach
 	void tearDown() throws Exception {
 		inventory = null;
 	}
-
+	/**
+	 * Compare user input with Inventory. If match: show the matching item, otherwise print error message
+	 */
 	@Test
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
