@@ -32,6 +32,15 @@ public class Inventory {
   
   /**
    * Adds the guitar to the list.
+   * 
+   * @param serialNumber manufacturer serial number
+	 * @param price store price
+	 * @param builder the guitar's manufacturer
+	 * @param model the manufacturers model
+	 * @param type guitar type (electric/accoustic)
+	 * @param backWood the wood used for the guitar body
+	 * @param topWood the wood used for the guitar's face
+   *
    */
   public void addGuitar(String serialNumber, double price,
                         String builder, String model,
@@ -43,6 +52,9 @@ public class Inventory {
   
   /**
    * Returns the guitar to the corresponding serialNumber.
+   * 
+   * @param serialNumber manufacturer serial number
+   * @return if found returns the guitar
    */
   public Guitar getGuitar(String serialNumber) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
@@ -56,6 +68,9 @@ public class Inventory {
   
   /**
    * Searches and returns the matched guitar that the user looks.
+   *
+   * @params searchGuitar
+   * @return matched guitar 
    */
   public Guitar search(Guitar searchGuitar) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
