@@ -9,7 +9,7 @@
 package edu.fitchburgstate.csc7400.hw1;
 
 import static org.junit.jupiter.api.Assertions.*;
-//Here we are importing all the required classes 
+//Here we are importing all the required classes.
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
