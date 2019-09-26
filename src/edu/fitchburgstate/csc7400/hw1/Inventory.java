@@ -27,6 +27,7 @@ public class Inventory {
    */
 
   private List<Guitar> guitars;
+
   public Inventory() {
     guitars = new LinkedList<Guitar>();
   }
@@ -65,12 +66,10 @@ public class Inventory {
   }
 
   /**
-   * @return guitar if any match
-   * Search by Manufacturer
-   * Search by Model
-   * Search by Type
-   * Search by Backwood
-   * search by TopWood
+   * Find the guitar that match user search
+   * @param searchGuitar a guitar that user want to find based on Manufacturer, Model,
+   * Type, Backwood, TopWood.
+   * @return guitar if first match
    */
 
   public Guitar search(Guitar searchGuitar) {
