@@ -1,16 +1,32 @@
-package edu.fitchburgstate.csc7400.hw1;
+/**
+ * Class: Object oriented design and analysis
+ * Professor: Orlando Montalvo
+ * Assignment: HW 1
+ * Student name: Vineela Vemula
+ * Date: 2019-09-24
+ */ 
+ package edu.fitchburgstate.csc7400.hw1;
 
-import static org.junit.jupiter.api.Assertions.*;
+/**
+ *  Importing different classes
+ *  */
+ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+//Displays test methods for Inventory class//
+
+ */
 class InventoryTest {
 	Inventory inventory;
-
-	@BeforeEach
+ 
+	// Method executed before @Test //
+	
+		@BeforeEach
 	void setUp() throws Exception {
+		// collection of different types of guitars//
 		inventory = new Inventory();
 		inventory.addGuitar("11277", 3999.95, "Collings", "CJ", "acoustic", "Indian Rosewood", "Sitka");
 		inventory.addGuitar("V95693", 1499.95, "Fender", "Stratocastor", "electric", "Alder", "Alder");
@@ -24,23 +40,27 @@ class InventoryTest {
 		inventory.addGuitar("566-62", 8999.95, "Ryan", "Cathedral", "acoustic", "Cocobolo", "Cedar");
 		inventory.addGuitar("6 29584", 2100.95, "PRS", "Dave Navarro Signature", "electric", "Mahogany", "Maple");
 	}
-
+// Method executed after the @Test //
+		// Inventory reset to Null //
 	@AfterEach
 	void tearDown() throws Exception {
 		inventory = null;
 	}
-
+// Required guitar is searched in the Inventory //
 	@Test
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
+		//Searching the inventory for particular guitars//
 		Guitar guitar = inventory.search(whatErinLikes);
 		if (guitar != null) {
 			System.out.println("Erin, you might like this " + guitar.getManufacturer() + " " + guitar.getModel() + " "
 					+ guitar.getType() + " guitar:\n   " + guitar.getBackWood() + " back and sides,\n   "
 					+ guitar.getTopWood() + " top.\nYou can have it for only $" + guitar.getPrice() + "!");
+			// When required guitar is found it diplays above message //
 		} else {
 			System.out.println("Sorry, Erin, we have nothing for you.");
 			fail("Did not find guitar");
+			//When required guitar is not found in inventory it displays above message//
 		}
 	}
 
