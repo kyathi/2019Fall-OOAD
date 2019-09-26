@@ -1,8 +1,6 @@
-
 package edu.fitchburgstate.csc7400.hw1;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -27,7 +25,6 @@ class InventoryTest {
 		inventory.addGuitar("6 29584", 2100.95, "PRS", "Dave Navarro Signature", "electric", "Mahogany", "Maple");
 	}
 	
-
 	@AfterEach
 	void tearDown() throws Exception {
 		inventory = null;

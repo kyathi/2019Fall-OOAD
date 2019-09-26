@@ -1,39 +1,48 @@
-package edu.fitchburgstate.csc7400.hw1;
 /*
- * class:Object Oriented Analysis and Design
- *Instructor:Orlando Montalvo
- *Assignment:Homework 1
- *Student Name:Kyathiboppana
+ * Class: Object-Oriented Analysis and Design
+ * Instructor:Orlando Montalvo
+ * Assignment: HW 1
+ * Date: 2019-09-25
+ * Authors: Kboppana, parkerrobc
  */
+
+package edu.fitchburgstate.csc7400.hw1;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-/**
-*Inventory contains all information about guitars that are available in store which will be 
-* helpful for customers to find suitable guitars.
-*
-* @author Kboppana
-*
-*/
 
+/**
+* Inventory contains all guitars available in the store
+*   
+* @author Kboppana
+* @author parkerrobc
+*/
 public class Inventory {
-  private List<Guitar> guitars;
+
   /**
-     *constructor
-     *@param serialNumber
-     *@param price
-     *@param builder
-     *@param model
-     *@param type
-     *@param backwood
-     *@param topWood
-     */
-  
+   * Inventory of guitars
+   */
+  private List<Guitar> guitars;
+
+  /**
+   * Constructor for the inventory
+   */
   public Inventory() {
     guitars = new LinkedList<Guitar>();
   }
 
+  /**
+   * Creates then adds a guitar to the inventory
+   *
+   * @param serialNumber guitar's serial number
+   * @param price guitar's price
+   * @param builder guitar's builder
+   * @param model guitar's model
+   * @param type guitar's type
+   * @param backWood guitar's back-wood
+   * @param topWood guitar's top-wood
+   */
   public void addGuitar(String serialNumber, double price,
                         String builder, String model,
                         String type, String backWood, String topWood) {
@@ -41,12 +50,14 @@ public class Inventory {
                                model, type, backWood, topWood);
     guitars.add(guitar);
   }
-   /**
-   *Returns about guitar particulars based on serial number
-   *@param serialNumber
-   *@return
+
+  /**
+   * Returns guitar based on serial number passed. If guitar does not exist, null is returned
+   *
+   * @param serialNumber guitar's serial number
+   *
+   * @return guitar || null
    */
-  
   public Guitar getGuitar(String serialNumber) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
       Guitar guitar = (Guitar)i.next();
@@ -56,34 +67,39 @@ public class Inventory {
     }
     return null;
   }
+
   /**
-  * Customer provides guitar particulars so that it search for matching guitar in inventory 
-  *if there returns information else return Null 
-  *@param Search for specific type of guitar
-  *@return
-  */
-  
+   * Searches inventory given a guitar with any manufacturer, model, type, back-wood, or top-wood characteristic
+   * then returns the guitar from inventory or null if no guitar is found
+   *
+   * @param searchGuitar for specific type of guitar
+   *
+   * @return guitar || null
+   */
   public Guitar search(Guitar searchGuitar) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
       Guitar guitar = (Guitar)i.next();
-      // Ignore serial number since that's unique
-      // Ignore price since that's unique
+
       String builder = searchGuitar.getManufacturer();
       if ((builder != null) && (!builder.equals("")) &&
           (!builder.equals(guitar.getManufacturer())))
         continue;
+
       String model = searchGuitar.getModel();
       if ((model != null) && (!model.equals("")) &&
           (!model.equals(guitar.getModel())))
         continue;
+
       String type = searchGuitar.getType();
       if ((type != null) && (!searchGuitar.equals("")) &&
           (!type.equals(guitar.getType())))
         continue;
+
       String backWood = searchGuitar.getBackWood();
       if ((backWood != null) && (!backWood.equals("")) &&
           (!backWood.equals(guitar.getBackWood())))
         continue;
+
       String topWood = searchGuitar.getTopWood();
       if ((topWood != null) && (!topWood.equals("")) &&
           (!topWood.equals(guitar.getTopWood())))
@@ -92,4 +108,5 @@ public class Inventory {
     }
     return null;
   }
+  
 }

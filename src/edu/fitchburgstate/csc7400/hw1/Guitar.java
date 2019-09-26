@@ -1,29 +1,64 @@
-/**
+/*
  * Class: Object-Oriented Design and Analysis
  * Professor: Orlando Montalvo
  * Assignment: HW 1
- * 
- * Date: 2018-09-03
+ * Date: 2018-09-25
+ * Authors: HeadFirstOODA, parkerrobc
  */
+
 package edu.fitchburgstate.csc7400.hw1;
 
 /**
- * Guitar contains the information needed to keep track of a type of guitar from
- * Rick's music store
+ * Guitar contains the information about a guitar
  * 
  * @author HeadFirstOODA
- *
+ * @author parkerrobc
  */
 public class Guitar {
 
 	/**
-	 * Full constructor
+	 * The serial number
+	 */
+	private String serialNumber;
+
+	/**
+	 * The manufacturer
+	 */
+	private String manufacturer;
+
+	/**
+	 * The model number
+	 */
+	private String model;
+
+	/**
+	 * The guitar type electric/acoustic (not enforced)
+	 */
+	private String type;
+
+	/**
+	 * The wood used for the guitar body
+	 */
+	private String backWood;
+
+	/**
+	 * The wood used for the guitar's face
+	 */
+	private String topWood;
+
+	/**
+	 * Price for the guitar
+	 */
+	private double price;
+
+	/**
+	 * Constructor for the guitar
 	 * 
-	 * @param serialNumber manufacturer serial number
-	 * @param price store price
-	 * @param manufacturer the guitar's manufacturer
-	 * @param model the manufacturers model
-	 * @param type guitar type (electric/accoustic)
+	 * @param serialNumber the serial number
+	 * @param price the price
+	 * @param manufacturer the manufacturer
+	 * @param model the model
+	 * @param type guitar type electric/acoustic (not enforced)
 	 * @param backWood the wood used for the guitar body
 	 * @param topWood the wood used for the guitar's face
 	 */
@@ -39,98 +74,59 @@ public class Guitar {
 	}
 
 	/**
-	 * Returns the manufacturer serial number
-	 * 
-	 * NB: Gets and sets do not need @params or @returns because they do one thing which
-	 * is already in the comment
-	 */
-	public String getSerialNumber() {
-		return serialNumber;
-	}
-
-	/**
-	 * Returns store price of guitar
-	 */
-	public double getPrice() {
-		return price;
-	}
-
-	/**
-	 * Sets the store price of the guitar
+	 * Sets the price
 	 */
 	public void setPrice(float newPrice) {
 		this.price = newPrice;
 	}
 
 	/**
-	 * Returns the name of the manufacturer
+	 * Returns the serial number
+	 */
+	public String getSerialNumber() {
+		return serialNumber;
+	}
+
+	/**
+	 * Returns the manufacturer
 	 */
 	public String getManufacturer() {
 		return this.manufacturer;
 	}
 
 	/**
-	 * Returns the manufacturer model
+	 * Returns the model
 	 */
 	public String getModel() {
 		return model;
 	}
 
 	/**
-	 * Returns the guitar type
-	 * @return
+	 * Returns the type
 	 */
 	public String getType() {
 		return type;
 	}
 
 	/**
-	 * Returns the type of wood used in the body
+	 * Returns the wood used for the back of the guitar
 	 */
 	public String getBackWood() {
 		return backWood;
 	}
 
 	/**
-	 * Returns the type of wood used in the face
-	 * @return
+	 * Returns the wood used for the guitar's face
 	 */
 	public String getTopWood() {
 		return topWood;
 	}
 
 	/**
-	 * The guitars manufacturer serial number
+	 * Returns the price
 	 */
-	private String serialNumber;
+	public double getPrice() {
+		return price;
+	}
 
-	/**
-	 * The name of the manufacturer
-	 */
-	private String manufacturer;
-
-	/**
-	 * The manufacturer model number
-	 */
-	private String model;
-
-	/**
-	 * The guitar type (electric/acoustic)
-	 */
-	private String type;
-
-	/**
-	 * The wood used for the back of the guitar
-	 */
-	private String backWood;
-
-	/**
-	 * The wood used for the face of the guitar
-	 */
-	private String topWood;
-
-	/**
-	 * Rick's price for the guitar
-	 */
-	private double price;
 }
