@@ -23,8 +23,8 @@ public class GuitarTest {
 	
 	/**
    	* Handles and throws exception
-   	*/
-	@Before
+	* @Before
+	*/
 	public void setUp() throws Exception {
 	}
 
