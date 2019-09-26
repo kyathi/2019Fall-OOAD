@@ -13,7 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * GuitarTest used to test and it throws the encountered exception
+ * GuitarTest test guitar class and it throws the encountered exception
  * 
  * 
  * @author HeadFirstOODA
