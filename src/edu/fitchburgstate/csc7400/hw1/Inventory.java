@@ -3,7 +3,7 @@ package edu.fitchburgstate.csc7400.hw1;
  * class:Object Oriented Analysis and Design
  *Instructor:Orlando Montalvo
  *Assignment:Homework 1
- *Student Name:Kyathiboppana
+ *Student Name:Kyathiboppana 
  */
 
 import java.util.Iterator;
