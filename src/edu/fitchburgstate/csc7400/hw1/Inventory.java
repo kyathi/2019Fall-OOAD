@@ -1,39 +1,41 @@
+import com.sun.tools.javac.util.List;
+
+/** 
+* Class: Object oriented analysis and design
+* Professor: Orlando Montalvo
+* Assignment: HW 1
+* Student name: Vineela Vemula
 package edu.fitchburgstate.csc7400.hw1;
-/*
- * class:Object Oriented Analysis and Design
- *Instructor:Orlando Montalvo
- *Assignment:Homework 1
- *Student Name:Kyathiboppana
- */
 
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 /**
-*Inventory contains all information about guitars that are available in store which will be 
-* helpful for customers to find suitable guitars.
+*Inventory contains all different types of guitars that are available in store
 *
-* @author Kboppana
+* @author vineela vemula
 *
 */
-
-public class Inventory {
+public class Inventory { 
+	
+  //It contains all the list of guitars//
   private List<Guitar> guitars;
   /**
      *constructor
      *@param serialNumber
-     *@param price
-     *@param builder
-     *@param model
-     *@param type
-     *@param backwood
-     *@param topWood
+     *@param price - Price in store
+     *@param builder - Guitar's producer
+     *@param model - Guitar model
+     *@param type - Type of Guitar
+     *@param backwood - Type of wood used for Guitar's body
+     *@param topWood - Type of wood used for Guitar's face
      */
-  
+ 
   public Inventory() {
     guitars = new LinkedList<Guitar>();
   }
-
+//Add new guitar to the list
+  
   public void addGuitar(String serialNumber, double price,
                         String builder, String model,
                         String type, String backWood, String topWood) {
@@ -42,10 +44,9 @@ public class Inventory {
     guitars.add(guitar);
   }
    /**
-   *Returns about guitar particulars based on serial number
-   *@param serialNumber
-   *@return
-   */
+   *Returns guitar particulars with respect to the serial number
+   *@param serialNumber - Manufacturer serial number
+   **/
   
   public Guitar getGuitar(String serialNumber) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
@@ -57,8 +58,8 @@ public class Inventory {
     return null;
   }
   /**
-  * Customer provides guitar particulars so that it search for matching guitar in inventory 
-  *if there returns information else return Null 
+  * Returns the guitar which matches with the requirement 
+  * or else returns Null 
   *@param Search for specific type of guitar
   *@return
   */
