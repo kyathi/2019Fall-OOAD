@@ -1,14 +1,30 @@
 package edu.fitchburgstate.csc7400.hw1;
+/**
+ * Class: Object-Oriented Design and Analysis
+ * Professor: Orlando Montalvo
+ * Assignment: HW 1
+ * 
+ * Date: 2018-09-25
+ */
 
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * InventoryTest test the inventory class
+ * 
+ * @author HeadFirstOODA
+ *
+ */
 class InventoryTest {
-	Inventory inventory;
-
+	Inventory inventory; 
+	
+	/**
+   	 * Checks by adding guitars with respective values and throws error if any
+   	 * 
+   	 */
 	@BeforeEach
 	void setUp() throws Exception {
 		inventory = new Inventory();
@@ -26,10 +42,18 @@ class InventoryTest {
 	}
 
 	@AfterEach
+	/**
+   	 * tearDown handles and throws exception 
+         * 
+   	 */
 	void tearDown() throws Exception {
 		inventory = null;
 	}
-
+	
+	/**
+   	 * testSearch searches for a guitar and prints the result if found, else prints nothing found. 
+         * 
+   	 */
 	@Test
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
