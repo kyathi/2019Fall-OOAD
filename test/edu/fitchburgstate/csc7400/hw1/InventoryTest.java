@@ -23,9 +23,8 @@ class InventoryTest {
 	
 	/**
    	 * Checks by adding guitars with respective values and throws error if any
-   	 * 
-   	 */
-	@BeforeEach
+   	 * @BeforeEach
+	 */
 	void setUp() throws Exception {
 		inventory = new Inventory();
 		inventory.addGuitar("11277", 3999.95, "Collings", "CJ", "acoustic", "Indian Rosewood", "Sitka");
@@ -41,10 +40,10 @@ class InventoryTest {
 		inventory.addGuitar("6 29584", 2100.95, "PRS", "Dave Navarro Signature", "electric", "Mahogany", "Maple");
 	}
 
-	@AfterEach
+	
 	/**
    	 * tearDown handles and throws exception 
-         * 
+         * @AfterEach
    	 */
 	void tearDown() throws Exception {
 		inventory = null;
@@ -52,9 +51,8 @@ class InventoryTest {
 	
 	/**
    	 * testSearch searches for a guitar and prints the result if found, else prints nothing found. 
-         * 
+         * @Test
    	 */
-	@Test
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
 		Guitar guitar = inventory.search(whatErinLikes);
