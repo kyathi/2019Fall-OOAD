@@ -46,7 +46,7 @@ public class Inventory {
   /**
    * Return  information about the guitar in the store
    * @param serialNumber manufacturer serial number
-   * @return
+   * @return guitar if serial number match else return null
    */
   public Guitar getGuitar(String serialNumber) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
@@ -59,9 +59,9 @@ public class Inventory {
   }
   /**
    * search inventory and returns list of matching guitars.Finds the guiters by matching 
-   * on provided parameters.returned null if no match is found
+   * on provided parameters.
    * @param searchGuitar search the specific type of guitar 
-   * @return
+   * @return guitar if match found else return null
    */
   public Guitar search(Guitar searchGuitar) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
