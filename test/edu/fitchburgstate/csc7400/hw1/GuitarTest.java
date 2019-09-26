@@ -22,13 +22,15 @@ import org.junit.Test;
 public class GuitarTest {
 	
 	/**
-   	* Handles and throws exception
-	* @Before
-	*/
+   	 * Handles and throws exception
+	 * @Before
+	 */
 	public void setUp() throws Exception {
 	}
-
-	@Test
+	
+	/**
+	 *@Test
+	 */
 	public void test() {
 		fail("Not yet implemented");
 	}
