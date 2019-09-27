@@ -12,11 +12,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class GuitarTest {
-
+/**
+* throws Exception throws exception in the program
+*/
 	@Before
 	public void setUp() throws Exception {
 	}
-
+/**
+* tests the program will fail if error
+*/
 	@Test
 	public void test() {
 		fail("Not yet implemented");
