@@ -1,11 +1,30 @@
+/**
+ * Class : Object-oriented design and analysis
+ * Assignment 1
+ * student Name : Sravanthi sribhashyam
+ */
 package edu.fitchburgstate.csc7400.hw1;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Inventory {
-  private List<Guitar> guitars;
+/**
+ *  Inventory contains list of available guitars
+ *  
+ *
+ */
 
+public class Inventory {
+
+  /**
+  * Guitars inventory list	
+  */
+  private List<Guitar> guitars;
+  
+  /**
+   * Constructor
+   * Initializes guitar inventory list
+   */
   public Inventory() {
     guitars = new LinkedList<Guitar>();
   }
