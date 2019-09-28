@@ -1,5 +1,13 @@
 package edu.fitchburgstate.csc7400.hw1;
 
+/*
+ *Course Name : Object Oriented Design and Analysis
+ *Professor Name : Orlando Montalvo
+ *Date : 2019-09-27
+ *Assignment - HW1
+ *Author : Divya Mallepally (01398602)
+ */
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.AfterEach;
@@ -9,8 +17,12 @@ import org.junit.jupiter.api.Test;
 class InventoryTest {
 	Inventory inventory;
 
+	/**
+     	* Test data setup. Add guitar data to inventory.
+     	*/
 	@BeforeEach
 	void setUp() throws Exception {
+		//  Instantiation inventory class
 		inventory = new Inventory();
 		inventory.addGuitar("11277", 3999.95, "Collings", "CJ", "acoustic", "Indian Rosewood", "Sitka");
 		inventory.addGuitar("V95693", 1499.95, "Fender", "Stratocastor", "electric", "Alder", "Alder");
@@ -25,11 +37,17 @@ class InventoryTest {
 		inventory.addGuitar("6 29584", 2100.95, "PRS", "Dave Navarro Signature", "electric", "Mahogany", "Maple");
 	}
 
+	/**
+     	* Clean up data setup after.
+     	*/
 	@AfterEach
 	void tearDown() throws Exception {
 		inventory = null;
 	}
-
+	
+     /**
+     * This function is to test search() method. This method takes in backwood parameter.
+     */
 	@Test
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
