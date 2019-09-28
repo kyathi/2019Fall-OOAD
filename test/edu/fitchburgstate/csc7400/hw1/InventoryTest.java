@@ -17,9 +17,9 @@ import org.junit.jupiter.api.Test;
 class InventoryTest {
 	Inventory inventory;
 
-	/**
-     	* Test data setup. Add guitar data to inventory.
-     	*/
+    /**
+    * Test data setup. Add guitar data to inventory.
+    */
 	@BeforeEach
 	void setUp() throws Exception {
 		//  Instantiation inventory class
@@ -37,17 +37,17 @@ class InventoryTest {
 		inventory.addGuitar("6 29584", 2100.95, "PRS", "Dave Navarro Signature", "electric", "Mahogany", "Maple");
 	}
 
-	/**
-     	* Clean up data setup after.
-     	*/
+    /**
+    * Clean up data setup after.
+    */
 	@AfterEach
 	void tearDown() throws Exception {
 		inventory = null;
 	}
 	
-     /**
-     * This function is to test search() method. This method takes in backwood parameter.
-     */
+    /**
+    * This function is to test search() method. This method takes in backwood parameter.
+    */
 	@Test
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
