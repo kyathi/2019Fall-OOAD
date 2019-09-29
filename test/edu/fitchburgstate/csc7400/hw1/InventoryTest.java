@@ -1,15 +1,27 @@
 
 package edu.fitchburgstate.csc7400.hw1;
+/**
+*class ; object oriented Analysis and Design 
+*professor; Orlando Montalvo
+*student; Sana Saleem
+*/
+
 
 import static org.junit.jupiter.api.Assertions.*;
-
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+/**
+* InvetoryTest will match the customer requirements for available stock in the store
+* @author sana
+*
+*/
 class InventoryTest {
 	Inventory inventory;
+	/**
+	* exception will be shown before inventory will be add in program
+	* @throws Exceptions
+	*/
 
 	@BeforeEach
 	void setUp() throws Exception {
@@ -34,6 +46,10 @@ class InventoryTest {
 	}
 
 	@Test
+	/**
+	* In this test method it matches the store inventory for the customer needs
+	* if there are some matches that will inform the customer for more options they can get
+	*/
 	void testSearch() {
 		Guitar whatErinLikes = new Guitar("", 0, "fender", "Stratocastor", "electric", "Alder", "Alder");
 		Guitar guitar = inventory.search(whatErinLikes);
