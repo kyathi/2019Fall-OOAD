@@ -1,3 +1,4 @@
+package edu.fitchburgstate.csc7400.hw1;
 /**
 * Class: Object-Oriented Design and Analysis
 
@@ -9,23 +10,21 @@
 
  * Date: 2019-09-20
  */
-package edu.fitchburgstate.csc7400.hw1;
-
-// The inventory class
-
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-
-/* since Inventory is a real-world entity, here it makes sense to instantiate it in the main method*/
-
+/**
+ * * Inventory  class contains available guitars from Ricks music store
+ * @author HeadFirstOODA
+ *
+ */
 public class Inventory {
 	/**
 
   *  Rick's guitar inventory list
 
   */
-  List<Guitar> guitars;
+  private List<Guitar> guitars;
   /**
   * Constructor
   *
@@ -37,15 +36,27 @@ public class Inventory {
     guitars = new LinkedList<Guitar>();
   }
   
-
-public void addGuitar(String serialNumber, double price,
-                        String builder, String model,
+		/**
+		 * This particular method adds guitar to the inventory
+		 * @param serial Number
+		 * @param price store
+		 * @param builder
+		 * @param model
+		 * @param type guitar type
+		 * @param backwood
+		 * @param@topwood
+		 */
+   public void addGuitar(String serialNumber,double price, String builder, String model,
                         String type, String backWood, String topWood) {
     Guitar guitar = new Guitar(serialNumber, price, builder,
                                model, type, backWood, topWood);
     guitars.add(guitar);
   }
-/*guitar contains the information needed to keep track of a type of guitar from Rick's music store*/
+   /**
+    * returns a guitar to the specified serial number
+    * @param serialNumber
+    * @return
+    */
   public Guitar getGuitar(String serialNumber) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
       Guitar guitar = (Guitar)i.next();
@@ -55,7 +66,11 @@ public void addGuitar(String serialNumber, double price,
     }
     return null;
   }
-  /* This method returns a list of guitars that matches with the specification of search object*/
+  /**
+   * returns a guitar from the Inventory based on the guitar specification
+   * @param searchGuitar
+   * @return
+   */
 public Guitar search(Guitar searchGuitar) {
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
       Guitar guitar = (Guitar)i.next();
