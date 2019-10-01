@@ -20,6 +20,8 @@ import java.util.List;
 public class Inventory {
   private List<Guitar> guitars;
   /**
+  *This inventory contains list of all guitars
+  *the rick availble currently
      *constructor
      *@param serialNumber
      *@param price
@@ -33,7 +35,12 @@ public class Inventory {
   public Inventory() {
     guitars = new LinkedList<Guitar>();
   }
-
+  /**
+  *This method add guitar takes serial number,model,builder,type,backwood,topwood,price to add a guitar
+  *And to create a new guitar instance
+  *and adds to rick inventory
+  *
+  */
   public void addGuitar(String serialNumber, double price,
                         String builder, String model,
                         String type, String backWood, String topWood) {
@@ -44,7 +51,8 @@ public class Inventory {
    /**
    *Returns about guitar particulars based on serial number
    *@param serialNumber
-   *@return
+   *@return guitar object
+   *
    */
   
   public Guitar getGuitar(String serialNumber) {
@@ -60,15 +68,21 @@ public class Inventory {
   * Customer provides guitar particulars so that it search for matching guitar in inventory 
   *if there returns information else return Null 
   *@param Search for specific type of guitar
-  *@return
+  *@return guitar from ricks collection inventory or null
   */
   
   public Guitar search(Guitar searchGuitar) {
+    //has next returns true if it has more guitars elements to iterate 
     for (Iterator<Guitar> i = guitars.iterator(); i.hasNext(); ) {
+      //It returns the next element in the list
+        //@exception-if no next element in list,It throws  'NoSuchElementException'
       Guitar guitar = (Guitar)i.next();
       // Ignore serial number since that's unique
       // Ignore price since that's unique
-      String builder = searchGuitar.getManufacturer();
+      /**Returns the name of the manufacturer and stores in the string  builder
+      */
+     
+       String builder = searchGuitar.getManufacturer();
       if ((builder != null) && (!builder.equals("")) &&
           (!builder.equals(guitar.getManufacturer())))
         continue;
